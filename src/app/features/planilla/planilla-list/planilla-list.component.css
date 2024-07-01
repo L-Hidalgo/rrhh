@@ -1,0 +1,163 @@
+
+.product-grid {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 350px; /* Ancho fijo de 350px */
+    height: 350px; /* Alto fijo de 250px */
+    margin: 10px; /* Espaciado entre tarjetas */
+    display: inline-block; /* Para alinear en una fila */
+    vertical-align: top; /* Asegura que las tarjetas estén alineadas en la parte superior */
+    overflow: hidden; /* Para que el contenido no se salga de las tarjetas */
+    position: relative; /* Necesario para posicionar elementos dentro de la tarjeta */
+}
+
+.product-grid .product-image {
+    width: 100%;
+    height: 80%; /* Ajustar altura de la imagen */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.product-grid .product-image a.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.product-grid .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+.product-grid .product-discount-label {
+    color: #fff;
+    background: #A5BA8D;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 25px;
+    padding: 0 10px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.product-grid .product-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .product-grid:hover .product-links {
+    right: 10px;
+  }
+  
+  .product-grid .product-links li {
+    margin-bottom: 10px; /* Ajusta el espacio entre los ítems */
+  }
+  
+  .product-grid .product-links li a {
+    color: #333; /* Color del ícono */
+    background: #fff; /* Fondo blanco */
+    font-size: 17px;
+    line-height: 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; /* Hace que el <a> sea redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  
+  .product-grid .product-links li a:hover {
+    color: #fff; /* Color del ícono al pasar el cursor */
+    background: #A5BA8D; /* Fondo negro al pasar el cursor */
+  }
+  
+  
+  
+
+.product-grid .add-to-cart {
+    background: #A5BA8D;
+    color: #fff;
+    font-size: 8px; /* Ajusta el tamaño de fuente según tus necesidades */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 10px 26px;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    transition: all 0.3s ease 0s;
+    text-align: center; /* Centra el texto horizontalmente */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del div */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza el contenido en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+
+  .product-grid .add-to-cart b {
+    display: block;
+    margin-bottom: 1px; /* Ajusta el valor según tus necesidades */
+  }
+
+  .product-grid:hover .add-to-cart {
+    bottom: 0;
+  }
+
+  .product-grid .add-to-cart:hover {
+    text-shadow: 4px 4px rgba(0,0,0,0.2);
+  }
+
+.product-grid .product-content {
+    background: #fff;
+    padding: 10px; /* Ajustar el padding */
+    height: 15%; /* Ajustar la altura del contenido */
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.1) inset;
+}
+
+.product-grid .title {
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.product-grid .title a {
+    color: #777;
+    transition: all 0.3s ease 0s;
+}
+
+.product-grid .title a:hover {
+    color: #a5ba8d;
+}
+
+.product-grid .price {
+    color: #0d0d0d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product-grid .price span {
+    color: #888;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 990px) {
+    .product-grid {
+        margin-bottom: 30px;
+        display: block;
+        width: 100%; /* Asegura que las tarjetas se ajusten al ancho de la pantalla en dispositivos móviles */
+    }
+}
